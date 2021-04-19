@@ -1,0 +1,122 @@
+[
+    {
+        "name": "French Marigold",
+        "serialNumber": "1",
+        "price": 3.99,
+        "category": "flower",
+        "quantity": 8,
+        "productImage": "../Assets/french_marigold.jpg"
+    },
+    {
+        "name": "Iris",
+        "serialNumber": "2",
+        "price": 2.99,
+        "category": "flower",
+        "quantity": 5,
+        "productImage": "../Assets/iris.jpg"
+    },
+    {
+        "name": "Morning Glory",
+        "serialNumber": "3",
+        "price": 5.99,
+        "category": "flower",
+        "quantity": 7,
+        "productImage": "../Assets/morning_glory.jpg"
+    },
+    {
+        "name": "Oriental Lily",
+        "serialNumber": "4",
+        "price": 9.99,
+        "category": "flower",
+        "quantity": 1,
+        "productImage": "../Assets/oriental_lily.jpg"
+    },
+    {
+        "name": "Pelargonium",
+        "serialNumber": "5",
+        "price": 12.99,
+        "category": "flower",
+        "quantity": 2,
+        "productImage": "../Assets/pelargonium.jpg"
+    },
+    {
+        "name": "Tulip",
+        "serialNumber": "6",
+        "price": 6.99,
+        "category": "flower",
+        "quantity": 15,
+        "productImage": "../Assets/tulip.jpg"
+    },
+    {
+        "name": "Pink Rose",
+        "serialNumber": "7",
+        "price": 1.99,
+        "category": "flower",
+        "quantity": 10,
+        "productImage": "../Assets/rose.jpg"
+    },
+    {
+        "name": "Daisy",
+        "serialNumber": "8",
+        "price": 2.99,
+        "category": "flower",
+        "quantity": 3,
+        "productImage": "../Assets/daisy.jpg"
+    },
+    {
+        "name": "Chrysanthemum",
+        "serialNumber": "9",
+        "price": 19.99,
+        "category": "flower",
+        "quantity": 5,
+        "productImage": "../Assets/chrysanthemum.jpg"
+    },
+    {
+        "name": "Ageratum Houstonianum",
+        "serialNumber": "10",
+        "price": 7.13,
+        "category": "flower",
+        "quantity": 3,
+        "productImage": "../Assets/ageratum_houstoanianum.jpg"
+    },
+    {
+        "name": "Rosemary",
+        "serialNumber": "11",
+        "price": 1.59,
+        "category": "herb",
+        "quantity": 100,
+        "productImage": "../Assets/rosemary.jpg"
+    },
+    {
+        "name": "Myrtle",
+        "serialNumber": "12",
+        "price": 1.99,
+        "category": "herb",
+        "quantity": 40,
+        "productImage": "../Assets/myrtle.jpg"
+    },
+    {
+        "name": "Oregano",
+        "serialNumber": "13",
+        "price": 1.59,
+        "category": "herb",
+        "quantity": 12,
+        "productImage": "../Assets/oregano.jpg"
+    },
+    {
+        "name": "Chives",
+        "serialNumber": "14",
+        "price": 1.59,
+        "category": "herb",
+        "quantity": 10,
+        "productImage": "../Assets/chives.jpg"
+    },
+    {
+        "name": "Thyme",
+        "serialNumber": "15",
+        "price": 1.99,
+        "category": "herb",
+        "quantity": 15,
+        "productImage": "../Assets/thyme.jpg"
+    }
+]
