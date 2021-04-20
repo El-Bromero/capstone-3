@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
 import AdminProduct from './AdminProduct';
+import AddProduct from './AddProduct';
 
 function Admin() {
 
@@ -31,6 +32,11 @@ function Admin() {
                         productImage={info.productImg}
                     />)
                 }
+            </div>
+            
+            <div>
+                <AddProduct/>
+                {/* <button>Add Product</button> */}
             </div>
         </div>
     )

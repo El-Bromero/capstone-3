@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Product.css'
 import { useStateValue } from './StateProvider';
 
 import Modal from 'react-modal';
 import zIndex from '@material-ui/core/styles/zIndex';
+import { Link } from 'react-router-dom';
 Modal.setAppElement('#root');
 
 function AdminProduct({ name, serialNumber, price, category, quantity, productImage }) {
@@ -25,8 +26,13 @@ function AdminProduct({ name, serialNumber, price, category, quantity, productIm
     //     })
     // };
 
-    const deleteProduct = () => {
+    const url = '/products/id/';
 
+    const deleteProduct = () => {
+        fetch(url + serialNumber, {
+            method: 'DELETE',
+        })
+        window.location.reload(false);
     };
 
     // useState for modal if open or not
