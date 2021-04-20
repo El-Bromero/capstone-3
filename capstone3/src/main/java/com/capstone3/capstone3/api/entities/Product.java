@@ -5,9 +5,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
-@AllArgsConstructor @NoArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "product")
 public class Product {
@@ -20,4 +21,22 @@ public class Product {
     private String category;
     private int quantity;
     private String productImg;
+
+//    @ManyToOne(targetEntity = Cart.class)
+//    @JoinColumn(name = "cart_id")
+//    private Cart cartProduct;
+
+//    @OneToMany(targetEntity = Cart.class, mappedBy = "productCart")
+//    private List<Cart> carts;
+
+//    @OneToOne(mappedBy = "productCart")
+//    private Cart cart;
+
+    public Product(String name, double price, String category, int quantity, String productImg) {
+        this.name = name;
+        this.price = price;
+        this.category = category;
+        this.quantity = quantity;
+        this.productImg = productImg;
+    }
 }
