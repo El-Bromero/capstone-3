@@ -14,3 +14,5 @@ INSERT INTO product(name,price,category,quantity,product_img) VALUES ('Myrtle',1
 INSERT INTO product(name,price,category,quantity,product_img) VALUES ('Oregano',1.59,'herb',12,'../Assets/oregano.jpg');
 INSERT INTO product(name,price,category,quantity,product_img) VALUES ('Chives',1.59,'herb',10,'../Assets/chives.jpg');
 INSERT INTO product(name,price,category,quantity,product_img) VALUES ('Thyme',1.99,'herb',15,'../Assets/thyme.jpg');
+
+INSERT INTO user(name) VALUE ('Brandon Romero');
