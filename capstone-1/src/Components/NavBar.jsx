@@ -89,6 +89,16 @@ function NavBar() {
                     </div>
                 </Link>
 
+                {/* About Us Link */}
+                <Link to="/admin" className="navbar-link">
+                    <div className="navbar-option">
+                        <span className="navbar-optionLineOne navbar-optionIcon">
+                        Inv.
+                        </span>
+                        <span className="navbar-optionLineTwo">Admin</span>
+                    </div>
+                </Link>
+
             </div>
             {/* Cart Icon */}
                 <Link to="/checkout" className="navbar-link">

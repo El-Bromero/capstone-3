@@ -6,6 +6,7 @@ import NavBar from './Components/NavBar';
 import Home from './Components/Home';
 import Checkout from './Components/Checkout';
 import AboutUs from './Components/AboutUs';
+import Admin from './Components/Admin';
 
 function App() {
   return (
@@ -30,6 +31,12 @@ function App() {
             <NavBar/>
             <Checkout />
           </Route>
+
+          <Route path = "/admin">
+            <NavBar/>
+            <Admin />
+          </Route>
+
 
         </Switch>
       </div>

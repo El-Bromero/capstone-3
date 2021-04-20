@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
-import Product from './Product';
-import homeImage from '../Images/soil-hands-banner.jfif'
-//import inventory from '../Data/inventory.json';
+import AdminProduct from './AdminProduct';
 
-function Home() {
+function Admin() {
 
     const url = '/products';
 
@@ -20,12 +18,11 @@ function Home() {
     // Load up data from json file to be used in processing product info on home page
     return (
         <div className="home">
-            <img className="home-image" src={homeImage} alt="" />
 
             <div className="home-row">
                 {/* Pass each product info to Product component */}
                 {inventoryData.map(info => 
-                    <Product 
+                    <AdminProduct 
                         name={info.name} 
                         serialNumber={info.id} 
                         price={info.price} 
@@ -39,4 +36,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default Admin;

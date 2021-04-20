@@ -17,8 +17,9 @@ public class User {
     private int userId;
     private String name;
 
-    @OneToOne(mappedBy = "userCart", cascade = CascadeType.REMOVE)
-    private Cart cart;
+//    @OneToOne//(mappedBy = "userCart")//, cascade = CascadeType.REMOVE)
+//    @JoinColumn(name = "cartId")
+//    private Cart cart;
 
     public User(String name) {
         this.name = name;
