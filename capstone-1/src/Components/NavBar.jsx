@@ -104,7 +104,7 @@ function NavBar() {
                 <Link to="/checkout" className="navbar-link">
                     <div className="navbar-optionCart">
                         <ShoppingCartIcon/>
-                        <span className="navbar-optionLineTwo navbar-cartCount">{cart?.length}</span>
+                        {/* <span className="navbar-optionLineTwo navbar-cartCount">{cart?.length}</span> */}
                     </div>
                 </Link>
         </nav>

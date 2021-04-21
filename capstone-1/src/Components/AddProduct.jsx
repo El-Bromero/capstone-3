@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './AddProduct.css'
 
 export default class AddProduct extends Component {
 
@@ -42,34 +43,35 @@ export default class AddProduct extends Component {
         const { name, price, category, quantity, productImg } = this.state
 
         return (
-            <div>
+            <div class="formDiv">
+
+                <div><h2>Add Product:</h2></div>
+
                 <form onSubmit={this.submitHandler}>
                     <div>
                         <label>Name: </label>
-                        <input type="text" name="name" value={name} onChange={this.changeHandler}/>
+                        <input type="text" class="formInput" name="name" value={name} onChange={this.changeHandler}/>
                     </div>
                     <div>
                         <label>Price: </label>
-                        <input type="text" name="price" value={price} onChange={this.changeHandler}/>
+                        <input type="text" class="formInput" name="price" value={price} onChange={this.changeHandler}/>
                     </div>
                     <div>
                         <label>Category: </label>
-                        <input type="text" name="category" value={category} onChange={this.changeHandler}/>
+                        <input type="text" class="formInput" name="category" value={category} onChange={this.changeHandler}/>
                     </div>
                     <div>
                         <label>Quantity: </label>
-                        <input type="text" name="quantity" value={quantity} onChange={this.changeHandler}/>
+                        <input type="text" class="formInput" name="quantity" value={quantity} onChange={this.changeHandler}/>
                     </div>
                     <div>
                         <label>ProductImg: </label>
-                        <input type="text" name="productImg" value={productImg} onChange={this.changeHandler}/>
+                        <input type="text" class="formInput" name="productImg" value={productImg} onChange={this.changeHandler}/>
                     </div>
-                    <button type="submit">Add Product</button>
+                    <button type="submit" class="submitButton">Add Product</button>
                 </form>
                 
             </div>
         )
     }
 }
-
-//export default AddProduct
