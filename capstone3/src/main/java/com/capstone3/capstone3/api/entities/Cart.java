@@ -17,9 +17,6 @@ public class Cart {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int cartId;
 
-//    @OneToOne//(optional = false)
-//    @JoinColumn(name = "user_id", referencedColumnName = "userId")
-//    private User userCart;
 
     @OneToOne(optional = false)
     @JoinColumn(name = "product_id", referencedColumnName = "id")

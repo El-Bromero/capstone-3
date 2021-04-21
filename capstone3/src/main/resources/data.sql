@@ -15,7 +15,5 @@ INSERT INTO product(name,price,category,quantity,product_img) VALUES ('Oregano',
 INSERT INTO product(name,price,category,quantity,product_img) VALUES ('Chives',1.59,'herb',10,'../Assets/chives.jpg');
 INSERT INTO product(name,price,category,quantity,product_img) VALUES ('Thyme',1.99,'herb',15,'../Assets/thyme.jpg');
 
-INSERT INTO user(name) VALUE ('Brandon Romero');
-
 INSERT INTO cart(product_quantity, product_id) VALUES (1, 1);
 INSERT INTO cart(product_quantity, product_id) VALUES (1, 2);
