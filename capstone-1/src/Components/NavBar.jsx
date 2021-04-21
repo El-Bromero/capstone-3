@@ -36,11 +36,11 @@ function NavBar() {
                         setSearchTerm(event.target.value);
                     }}
                 />
-                <datalist id="names">
+                {/* <datalist id="names">
                                 {inventory.map((val, key) => {
                                     return <option value={val.name}/>
                                 })}
-                            </datalist>
+                            </datalist> */}
                 {/* FILTER RESULTS */}
                 {inventory.filter((val)=> {
                     if (searchTerm === "") {

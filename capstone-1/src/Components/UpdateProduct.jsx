@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import './AddProduct.css'
 
-export default class AddProduct extends Component {
+export default class UpdateProduct extends Component {
 
     constructor(props) {
         super(props)
 
         this.state = {
-            name: "",
-            price: "0.00",
-            category: "",
-            quantity: "0",
-            productImg: ""
+            name: this.props.name,
+            price: this.props.price,
+            category: this.props.category,
+            quantity: this.props.quantity,
+            productImg: this.props.productImg
         }
     }
 
@@ -22,8 +22,8 @@ export default class AddProduct extends Component {
     submitHandler = e => {
         //e.preventDefault();
         console.log(this.state);
-        fetch('/products', {
-            method: 'POST',
+        fetch('/products/id/' + this.props.serialNumber, {
+            method: 'PUT',
             headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ export default class AddProduct extends Component {
         return (
             <div className="formDiv">
 
-                <div><h2>Add Product:</h2></div>
+                <div><h2>Update Product:</h2></div>
 
                 <form onSubmit={this.submitHandler}>
                     <div>
@@ -68,7 +68,7 @@ export default class AddProduct extends Component {
                         <label>ProductImg: </label>
                         <input type="text" className="formInput" name="productImg" value={productImg} onChange={this.changeHandler}/>
                     </div>
-                    <button type="submit" className="submitButton">Add Product</button>
+                    <button type="submit" className="submitButton">Update</button>
                 </form>
                 
             </div>
