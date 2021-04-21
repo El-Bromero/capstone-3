@@ -23,37 +23,6 @@ function AdminProduct({ name, serialNumber, price, category, quantity, productIm
 
     // useState for modal if open or not
     const [modalIsOpen, setModalIsOpen] = useState(false);
-        
-    // const[state, setState] = useState({
-    //         name: name,
-    //         price: price,
-    //         category: category,
-    //         quantity: quantity,
-    //         productImg: productImage
-    //     });
-        
-
-    // const changeHandler = (e) => {
-    //     setState({[e.target.name]: e.target.value})
-    // }
-
-    //  const submitHandler = e => {
-    //     e.preventDefault();
-    //     console.log(state);
-    //     fetch('/products/id/' + serialNumber, {
-    //         method: 'PUT',
-    //         headers: {
-    //         'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify({
-    //             name: state.name,
-    //             price: state.price,
-    //             category: state.category,
-    //             quantity: state.quantity,
-    //             productImg: state.productImg
-    //         })
-    //     })
-    // }
 
     return (
         <div className="product">
@@ -104,30 +73,6 @@ function AdminProduct({ name, serialNumber, price, category, quantity, productIm
                 </ul>
 
                 <UpdateProduct name={name} serialNumber={serialNumber} price={price} category={category} quantity={quantity} productImg={productImage} />
-
-                {/* <form onSubmit={submitHandler}>
-                    <div>
-                        <label>Name: </label>
-                        <input type="text" className="formInput" name="name" value={state.name} onChange={changeHandler}/>
-                    </div>
-                    <div>
-                        <label>Price: </label>
-                        <input type="text" className="formInput" name="price" value={state.price} onChange={changeHandler}/>
-                    </div>
-                    <div>
-                        <label>Category: </label>
-                        <input type="text" className="formInput" name="category" value={state.category} onChange={changeHandler}/>
-                    </div>
-                    <div>
-                        <label>Quantity: </label>
-                        <input type="text" className="formInput" name="quantity" value={state.quantity} onChange={changeHandler}/>
-                    </div>
-                    <div>
-                        <label>ProductImg: </label>
-                        <input type="text" className="formInput" name="productImg" value={state.productImg} onChange={changeHandler}/>
-                    </div>
-                    <button type="submit" className="submitButton">Modify Product</button>
-                </form> */}
 
                 <button onClick={() => setModalIsOpen(false)} className="product-modalButton">Close</button>
             </Modal>

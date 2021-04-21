@@ -11,7 +11,6 @@ function Admin() {
         fetch(url)
         .then(response => response.json())
         .then(data => setInventoryData(data));
-        console.log(inventoryData);
     }, [])
 
     const [inventoryData, setInventoryData] = useState([]);
@@ -36,7 +35,6 @@ function Admin() {
             
             <div>
                 <AddProduct/>
-                {/* <button>Add Product</button> */}
             </div>
         </div>
     )

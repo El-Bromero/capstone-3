@@ -21,11 +21,11 @@ public class Cart {
 //    @JoinColumn(name = "user_id", referencedColumnName = "userId")
 //    private User userCart;
 
-//    @OneToOne(optional = false)
-//    @JoinColumn(name = "product_id", referencedColumnName = "id")
-//    private Product productCart;
+    @OneToOne(optional = false)
+    @JoinColumn(name = "product_id", referencedColumnName = "id")
+    private Product productCart;
 
-//    private int product_quantity;
+    private int product_quantity;
 
 //    @OneToMany(targetEntity = Product.class, mappedBy = "cartProduct")
 //    private List<Product> products;

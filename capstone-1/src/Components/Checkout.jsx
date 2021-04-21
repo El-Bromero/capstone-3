@@ -46,7 +46,7 @@ function Checkout() {
             { cart.length > 0 && (
                 <div className="checkout-right">
                     {/* Get subtotal of cart here. Will be moved to right side of the page */}
-                    <Subtotal/>
+                    {/* <Subtotal/> */}
                 </div>
             )}
         </div>

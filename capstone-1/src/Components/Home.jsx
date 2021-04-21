@@ -12,7 +12,6 @@ function Home() {
         fetch(url)
         .then(response => response.json())
         .then(data => setInventoryData(data));
-        console.log(inventoryData);
     }, [])
 
     const [inventoryData, setInventoryData] = useState([]);

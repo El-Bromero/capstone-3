@@ -1,5 +1,6 @@
 package com.capstone3.capstone3.api.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,8 +30,9 @@ public class Product {
 //    @OneToMany(targetEntity = Cart.class, mappedBy = "productCart")
 //    private List<Cart> carts;
 
-//    @OneToOne(mappedBy = "productCart")
-//    private Cart cart;
+    @JsonIgnore
+    @OneToOne(mappedBy = "productCart", cascade = CascadeType.ALL)
+    private Cart cart;
 
     public Product(String name, double price, String category, int quantity, String productImg) {
         this.name = name;
