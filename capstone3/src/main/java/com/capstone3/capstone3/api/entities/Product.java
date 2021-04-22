@@ -1,12 +1,10 @@
 package com.capstone3.capstone3.api.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -22,13 +20,6 @@ public class Product {
     private String category;
     private int quantity;
     private String productImg;
-
-//    @ManyToOne(targetEntity = Cart.class)
-//    @JoinColumn(name = "cart_id")
-//    private Cart cartProduct;
-
-//    @OneToMany(targetEntity = Cart.class, mappedBy = "productCart")
-//    private List<Cart> carts;
 
     @JsonIgnore
     @OneToOne(mappedBy = "productCart", cascade = CascadeType.REMOVE)

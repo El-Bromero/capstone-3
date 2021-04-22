@@ -14,20 +14,12 @@ import java.util.List;
 public class Cart {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int cartId;
 
-
-    @OneToOne//(optional = false)
+    @OneToOne
     @JoinColumn(name = "product_id", referencedColumnName = "id")
     private Product productCart;
 
     private int product_quantity;
 
-//    @OneToMany(targetEntity = Product.class, mappedBy = "cartProduct")
-//    private List<Product> products;
-
-//    @ManyToOne(targetEntity = Product.class)
-//    @JoinColumn(name = "id")
-//    private Product productCart;
 }
