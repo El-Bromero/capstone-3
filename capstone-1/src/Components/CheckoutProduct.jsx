@@ -2,7 +2,7 @@ import React from 'react';
 import './CheckoutProduct.css';
 import { useStateValue } from './StateProvider';
 
-function CheckoutProduct({ id, title, image, category, quantity, price}) {
+function CheckoutProduct({ id, title, image, category, quantity, price, product_quantity}) {
     const [{ cart }, dispatch] = useStateValue();
 
     // Send REMOVE_FROM_CART action with dispatch to the reducer so that it can remove the item from cart
@@ -24,6 +24,7 @@ function CheckoutProduct({ id, title, image, category, quantity, price}) {
                     <small>$</small>
                     <strong>{price}</strong>
                 </p>
+                <p><strong>Quantity: {product_quantity}</strong></p>
                 <button onClick={removeFromCart}>Remove from cart</button>
             </div>
         </div>
