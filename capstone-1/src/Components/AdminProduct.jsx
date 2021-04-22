@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './Product.css'
-import { useStateValue } from './StateProvider';
 
 import Modal from 'react-modal';
-import zIndex from '@material-ui/core/styles/zIndex';
-import { Link } from 'react-router-dom';
 import UpdateProduct from './UpdateProduct';
 Modal.setAppElement('#root');
 
 function AdminProduct({ name, serialNumber, price, category, quantity, productImage }) {
-    
-    const [{ cart }, dispatch] = useStateValue();
 
     const url = '/products/id/';
 

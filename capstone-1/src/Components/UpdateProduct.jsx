@@ -20,8 +20,6 @@ export default class UpdateProduct extends Component {
     }
 
     submitHandler = e => {
-        //e.preventDefault();
-        console.log(this.state);
         fetch('/products/id/' + this.props.serialNumber, {
             method: 'PUT',
             headers: {

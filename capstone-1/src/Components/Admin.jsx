@@ -15,12 +15,10 @@ function Admin() {
 
     const [inventoryData, setInventoryData] = useState([]);
 
-    // Load up data from json file to be used in processing product info on home page
     return (
         <div className="home">
 
             <div className="home-row">
-                {/* Pass each product info to Product component */}
                 {inventoryData.map(info => 
                     <AdminProduct 
                         name={info.name} 

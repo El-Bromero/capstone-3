@@ -20,8 +20,6 @@ export default class AddProduct extends Component {
     }
 
     submitHandler = e => {
-        //e.preventDefault();
-        console.log(this.state);
         fetch('/products', {
             method: 'POST',
             headers: {

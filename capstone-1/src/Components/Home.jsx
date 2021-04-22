@@ -16,13 +16,11 @@ function Home() {
 
     const [inventoryData, setInventoryData] = useState([]);
 
-    // Load up data from json file to be used in processing product info on home page
     return (
         <div className="home">
             <img className="home-image" src={homeImage} alt="" />
 
             <div className="home-row">
-                {/* Pass each product info to Product component */}
                 {inventoryData.map(info => 
                     <Product 
                         name={info.name} 
