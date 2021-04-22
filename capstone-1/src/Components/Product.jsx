@@ -1,27 +1,33 @@
 import React, { useState } from 'react';
 import './Product.css'
-import { useStateValue } from './StateProvider';
-
 import Modal from 'react-modal';
-import zIndex from '@material-ui/core/styles/zIndex';
 Modal.setAppElement('#root');
 
 function Product({ name, serialNumber, price, category, quantity, productImage }) {
-    
-    const [{ cart }, dispatch] = useStateValue();
+
+    const url = '/carts';
     
     // Send ADD_TO_CART action with dispatch to reducer. Adds item to cart
     const addToCart = () => {
-        dispatch({
-            type: 'ADD_TO_CART',
-            item: {
-                id: serialNumber,
-                title: name,
-                image: productImage,
-                category: category,
-                quantity: quantity,
-                price: price
+        fetch(url, {
+            method: 'POST',
+            headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
             },
+            body: JSON.stringify({
+                cartId : serialNumber,
+                productCart : {
+                    name: name,
+                    id : serialNumber,
+                    price: price,
+                    category: category,
+                    quantity: quantity,
+                    productImg: productImage
+                },
+                product_quantity : 1
+                
+            })
         })
     };
 
