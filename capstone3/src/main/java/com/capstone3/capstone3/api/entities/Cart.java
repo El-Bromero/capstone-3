@@ -14,11 +14,11 @@ import java.util.List;
 public class Cart {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int cartId;
 
 
-    @OneToOne(optional = false)
+    @OneToOne//(optional = false)
     @JoinColumn(name = "product_id", referencedColumnName = "id")
     private Product productCart;
 

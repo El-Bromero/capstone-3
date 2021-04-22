@@ -31,7 +31,7 @@ public class Product {
 //    private List<Cart> carts;
 
     @JsonIgnore
-    @OneToOne(mappedBy = "productCart", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "productCart", cascade = CascadeType.REMOVE)
     private Cart cart;
 
     public Product(String name, double price, String category, int quantity, String productImg) {

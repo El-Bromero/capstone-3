@@ -40,7 +40,7 @@ public class CartController {
     }
 
     @DeleteMapping(path = "/id/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @ResponseStatus(HttpStatus.OK)
     public void deleteCart(@PathVariable int id) {
         cartService.deleteCart(id);
     }

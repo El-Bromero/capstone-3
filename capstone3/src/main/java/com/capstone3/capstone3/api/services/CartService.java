@@ -14,6 +14,11 @@ public class CartService {
     private iCartRepo cartRepo;
 
     public Cart saveCart(Cart cart) {
+        Optional<Cart> oCart = getCartById(cart.getCartId());
+
+        if(oCart.isPresent()) {
+            return updateCart(cart.getCartId(), cart);
+        }
         return cartRepo.save(cart);
     }
 
@@ -26,16 +31,32 @@ public class CartService {
     }
 
     public void deleteCart(int id) {
-        cartRepo.deleteById(id);
+        Optional<Cart> oCart = getCartById(id);
+        if(oCart.isPresent()) {
+            Cart alreadyPresentCart = oCart.get();
+            alreadyPresentCart.setProduct_quantity(alreadyPresentCart.getProduct_quantity()-1);
+            System.out.println(alreadyPresentCart.getProduct_quantity());
+            if(alreadyPresentCart.getProduct_quantity() > 0) {
+                cartRepo.save(alreadyPresentCart);
+            }
+            else {
+                cartRepo.deleteById(id);
+            }
+            //return;
+        }
+        //cartRepo.deleteById(id);
     }
 
     public Cart updateCart(int id, Cart cart) {
         Optional<Cart> oCart = getCartById(id);
-
+        System.out.println("Hey");
         if(oCart.isPresent()) {
-            Cart modifiedCart = oCart.get();
-
+            Cart alreadyPresentCart = oCart.get();
+            alreadyPresentCart.setProduct_quantity(alreadyPresentCart.getProduct_quantity()+1);
+            //System.out.println(alreadyPresentCart);
+            return cartRepo.save(alreadyPresentCart);
         }
+        System.out.println("Listen");
         return cart;
     }
 }
