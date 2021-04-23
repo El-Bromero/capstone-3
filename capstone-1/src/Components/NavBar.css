@@ -1,0 +1,80 @@
+.navbar {
+    background-color: #87DE76;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-logo {
+    width: 100px;
+    object-fit: contain;
+    margin: 1rem 0.5rem 0.5rem 1rem;
+}
+
+.navbar-optionCart {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-cartCount {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-option {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar-optionLineOne {
+    font-size: 10px;
+}
+
+.navbar-optionLineTwo {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.navbar-optionIcon {
+    align-self: center;
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-search {
+    display: flex;
+    flex: 1;
+}
+
+.navbar-searchInput {
+    height: 1rem;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+.navbar-searchIcon {
+    background-color: rgb(39, 167, 39);
+    padding: 0.5rem;
+    height: 1.25rem !important; /* Doing !important here to override Material-Ui height to better fit icon */
+}
+
+.navbar-item-name {
+    z-index: 1000;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
